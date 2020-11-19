@@ -14,8 +14,8 @@
     "e2e": "ng e2e"
   },
   "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
+    "node": "10.15.1",
+    "npm": "6.4.1"
   },
   "repository": {
     "type": "git",
