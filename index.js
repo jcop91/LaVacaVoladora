@@ -15,12 +15,13 @@ require('dotenv').config();
 const app = express();
 
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-app.use(express.static(path.join(__dirname,'dist','LaVacaVoladora')));
 app.use('/api', cors());
-app.get('/*', (req, res) => {
+apiRoutes(app);
+app.use(express.static(path.join(__dirname,'dist','LaVacaVoladora')));
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'dist','LaVacaVoladora','index.html'));
     });
-apiRoutes(app);
+
 
 app.listen(port, () => {
 console.log('app is running in '+`${process.env.APP_PATH}:${port}`);
