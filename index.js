@@ -9,7 +9,7 @@ const swaggerOptions = require('./Backend/src/services/swagger.config');
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-const routes = require('./Backend/routes');
+//const routes = require('./Backend/routes');
 const apiRoutes = require('./Backend/routes/api');
 require('dotenv').config();
 const app = express();
@@ -17,7 +17,9 @@ const app = express();
 app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use(express.static(path.join(__dirname,'dist','la-vaca-voladora')));
 app.use('/api', cors());
-app.use('/',routes);
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname,'/dist','la-vaca-voladora','index.html'));
+    });
 apiRoutes(app);
 
 app.listen(port, () => {
