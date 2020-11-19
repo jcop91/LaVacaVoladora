@@ -7,7 +7,6 @@
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "node .",
-    "dev": "nodemon .",
     "tree": "tree /f /a > tree.txt",
     "build": "ng build",
     "test": "ng test",
