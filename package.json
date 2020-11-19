@@ -5,17 +5,17 @@
   "main": "index.js",
   "scripts": {
     "ng": "ng",
-    "start": "node .",
+    "start": "node index.js",
     "tree": "tree /f /a > tree.txt",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "postinstall": "ng build --prod"
   },
   "engines": {
-    "node": "10.15.1",
-    "npm": "6.4.1"
+    "node": "10.x",
+    "npm": "6.x"
   },
   "repository": {
     "type": "git",
