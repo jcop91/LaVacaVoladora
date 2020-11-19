@@ -1,0 +1,12 @@
+<div class = "topnav">
+    <span><img src="{{ImgAsset}}" alt=""></span>
+    <ul>
+        <li><a routerLink="menu"><mat-icon>restaurant_menu</mat-icon>Menú</a></li>
+        <li><a routerLink="**"><mat-icon>contact_phone</mat-icon>Contacto</a></li>
+        <li *ngIf="isAuthenticated; else Authenticate"><a routerLink=""><mat-icon>account_circle</mat-icon>Usuario</a></li>
+    </ul>
+</div>
+
+<ng-template #Authenticate>
+    <li><a routerLink="login"><mat-icon>lock_open</mat-icon>Inicio Sesión</a></li>
+</ng-template>

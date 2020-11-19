@@ -1,0 +1,17 @@
+<div *ngIf="products.length != 0; else emptyData">
+    <div class="grid">
+        <div class="xs-100 sm-50 md-33 lg-25" *ngFor="let item of products">
+            <div class="card">
+                    <app-menu-item [item]="item"></app-menu-item>
+               <!-- <form [formGroup]="form" (submit)="addShoppingCart(0)">-->
+                <!--</form> -->
+                    
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #emptyData>
+    <div class="dataEmpty">
+        <h1>No hay elementos</h1>
+    </div>
+</ng-template>

@@ -1,0 +1,22 @@
+   <div id="card" [formGroup]="form">
+     <h2>{{item.nombre}}</h2>
+     <div class="imgContainer"><img src="{{item.imagen}}" alt="imagen producto"></div>
+     <div class="descripContainer">
+       <p>{{item.descripcion}}</p>
+     </div>
+     <div class="horizontal">
+       <button type="button" (click)="incrementCount()">
+         <mat-icon>add_circle_outline</mat-icon>
+       </button>
+       <input min="1" readonly formControlName="amount">
+       <button type="button" (click)="decrementCount()" [disabled]="form.controls.amount.value == 1">
+         <mat-icon>remove_circle_outline</mat-icon>
+       </button>
+     </div>
+     <div class="horizontal">
+       <h3>${{cost}}</h3>
+       <button>
+         <mat-icon>add_shopping_cart</mat-icon>
+       </button>
+     </div>
+   </div>
