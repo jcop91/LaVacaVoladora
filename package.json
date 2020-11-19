@@ -4,7 +4,6 @@
   "description": "Proyecto para la clase de Programacion de Aplicaciones de Escritorio ITESO Otoño 2020",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "node .",
     "tree": "tree /f /a > tree.txt",
